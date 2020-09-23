@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace BlogFitness.BL.Model
 {
+
     /// <summary>
     /// Пол.
     /// </summary>
+    [Serializable]
     public class Gender
     {
         /// <summary>
@@ -26,8 +28,8 @@ namespace BlogFitness.BL.Model
             {
                 throw new ArgumentNullException("Имя пола не может быть пустым или null", nameof(name));
 
-                Name = name;
             }
+            Name = name;
         }
 
         public override string ToString()

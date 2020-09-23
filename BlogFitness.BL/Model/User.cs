@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogFitness.BL.Model
 {
+    [Serializable]
     /// <summary>
     /// Пользователь.
     /// </summary>
@@ -56,7 +57,7 @@ namespace BlogFitness.BL.Model
             {
                 throw new ArgumentException("Имя пользователя не может быть пустым или null.", nameof(name));
             }
-             if (Gender == null)
+             if (gender == null)
             {
                 throw new ArgumentException("Пол не может быть null.", nameof(gender));
             }
